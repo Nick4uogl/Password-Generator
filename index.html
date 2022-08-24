@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="password.png">
+    <link rel="stylesheet" href="">
+    <title>Password Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1 class="generator-title">Generate a <span> random password</span></h1>
+            <p class="generator-subtitle">Never use an insecure password again.</p>
+            <div class="settings">
+                <div class="setting">
+                    <label class="input-label">Set the passwords length:</label>
+                    <input id="length" type="number" value="15" min="4" max="15" class="generator-input" />
+                </div>
+                <div class="setting">
+                    <label class="input-label">Include uppercase letters:</label>
+                    <input id="upper" type="checkbox" checked class="generator-check" />
+                </div>
+                <div class="setting">
+                    <label class="input-label">Include lowercase letters:</label>
+                    <input id="lower" type="checkbox" checked class="generator-check" />
+                </div>
+                <div class="setting">
+                    <label class="input-label">Include numbers:</label>
+                    <input id="numbers" type="checkbox" checked class="generator-check" />
+                </div>
+                <div class="setting">
+                    <label class="input-label">Include symbols:</label>
+                    <input id="symbols" type="checkbox" checked class="generator-check" />
+                </div>
+            </div>
+            <button id="button" class="generator-btn">Generate password</button>
+            <div class="generator-output">
+                <div class="output-container">
+                    <div id="result1" class="password"></div>
+                    <button id="clipboard" class="password-clipboard"><img src="clipboard.svg"
+                            alt="clipboard" /></button>
+                    <span class="tooltip">Copied</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
